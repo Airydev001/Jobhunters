@@ -5,14 +5,14 @@ const dotenv = require('dotenv');
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser")
 
-const authRoute = require("./routes/auth.js");
+const authRoute = require("./routes/auth");
 
 
-const userRoute = require("./routes/user.js");
+const userRoute = require("./routes/user");
 
-const jobRoute = require("./routes/job.js");
+const jobRoute = require("./routes/job");
 
-const bookRoute = require("./routes/bookmark.js");
+const bookRoute = require("./routes/bookmark");
 
 dotenv.config();
 
