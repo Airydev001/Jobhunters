@@ -12,7 +12,7 @@ const userRoute = require("./routes/user.js");
 
 const jobRoute = require("./routes/job.js");
 
-const bookRoute = require("../backend/routes/book.js");
+const bookRoute = require("./routes/bookmark.js");
 
 dotenv.config();
 
