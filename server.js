@@ -5,14 +5,14 @@ const dotenv = require('dotenv');
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser")
 
-const authRoute = require("../backend/routes/auth");
+const authRoute = require("./routes/auth.js");
 
 
-const userRoute = require("../backend/routes/user");
+const userRoute = require("./routes/user.js");
 
-const jobRoute = require("../backend/routes/job");
+const jobRoute = require("./routes/job.js");
 
-const bookRoute = require("../backend/routes/job");
+const bookRoute = require("../backend/routes/book.js");
 
 dotenv.config();
 
@@ -25,7 +25,7 @@ app.use(bodyParser.json());
 app.use("/api/", authRoute);
 app.use("/api/users", userRoute);
 
-app.use("/api/jobs", jobRoute);
+app.use("/api/jobs", jobRoute);r
 
 
 app.use("/api/bookmarks", bookRoute);
