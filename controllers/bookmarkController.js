@@ -1,5 +1,8 @@
 const Bookmark = require("../models/bookmark");
-export async function createBookmark(req, res) {
+
+
+ module.exports = {
+  createBookmark: async (req, res)=> {
   const newBook = new Bookmark(req.body);
 
   try {
@@ -9,8 +12,8 @@ export async function createBookmark(req, res) {
   } catch (error) {
     res.status(500).json(error);
   }
-}
-export async function deleteBookmark(req, res) {
+},
+ deleteBookmark: async (req, res)=> {
   // const newBook = new Bookmark(req.body);
   try {
     await findByIdAndDelete(req.params.id);
@@ -19,8 +22,8 @@ export async function deleteBookmark(req, res) {
   } catch (error) {
     res.status(500).json(error);
   }
-}
-export async function getBookmarks(req, res) {
+},
+getBookmarks: async (req, res) =>{
 
 
   try {
@@ -32,4 +35,5 @@ export async function getBookmarks(req, res) {
   } catch (error) {
     res.status(500).json(error);
   }
+},
 }

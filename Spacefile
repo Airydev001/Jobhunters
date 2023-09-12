@@ -5,3 +5,16 @@ micros:
     src: ./
     engine: nodejs16
     primary: true
+    presets: 
+      env:
+       - name: MONGO_URL
+         description: It is only avail to micro
+         default: mongodb+srv://japh:japhethino1234@cluster0.fgzspjf.mongodb.net/
+       - name: JWT_SEC
+         description:  avail to micro
+         default: 092647c5db08eea9d13e724ad6c8022d44b344356ecdbc4eb2a88b5e02028dee38025ae64275efeab7ed843d07e4c3fdeb0bc80ec68199a517da760cd0a1727f
+       - name: SECRET
+         description: my secret access
+         default: slack202
+       
+       

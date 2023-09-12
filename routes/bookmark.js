@@ -9,4 +9,6 @@ router.post("/", bookmarkController.createBookmark);
 router.delete("/:id", bookmarkController.deleteBookmark);
 
 
-router.get("/:userId", bookmarkController.getBookmarks)
+router.get("/:userId", bookmarkController.getBookmarks);
+
+module.exports = router;

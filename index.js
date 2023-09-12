@@ -25,11 +25,14 @@ app.use(bodyParser.json());
 app.use("/api/", authRoute);
 app.use("/api/users", userRoute);
 
-app.use("/api/jobs", jobRoute);r
+app.use("/api/jobs", jobRoute);
 
 
 app.use("/api/bookmarks", bookRoute);
 
 
 
-app.listen(process.env.PORT || 4000, console.log(`LIstening on port ${[process.env.PORT]}!`));
+app.listen(process.env.PORT || 4000, ()=>{
+  
+  console.log(`LIstening on port ${[process.env.PORT]}!`);
+});
