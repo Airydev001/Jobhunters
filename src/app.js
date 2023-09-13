@@ -16,7 +16,7 @@ const bookRoute = require("./routes/bookmark");
 
 dotenv.config();
 
-mongoose.connect(process.env.MONGO_URL).then(()=> console.log("db connected")).catch((err)=> console.log(err));
+mongoose.connect(`mongodb+srv:${process.env.MONGO_URL}`).then(()=> console.log("db connected")).catch((err)=> console.log(err));
 
 app.use(bodyParser.urlencoded({extended : true}));
 app.use(bodyParser.json());
