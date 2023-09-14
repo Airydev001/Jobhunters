@@ -3,8 +3,8 @@ const mongoose = require("mongoose");
 const BookmarkSchema = new mongoose.Schema(
     {
        job: {
-        type: String, 
-        required: true,
+        type: mongoose.Schema.Types.ObjectId, 
+        ref:"Job"
 
        },
        userId: {
@@ -12,33 +12,6 @@ const BookmarkSchema = new mongoose.Schema(
         required: true,
 
        },
-       title: {
-        type: String, 
-        required: true,
-
-       },
-       imageUrl: {
-        type: String, 
-        required: true,
-
-       },
-       company: {
-        type: String, 
-        required: true,
-
-       },
-       location: {
-        type: String, 
-        required: true,
-
-       },
-       contract: {
-        type: String, 
-        required: true,
-
-       },
-
-
     },{timestamps: true}
 )
 
