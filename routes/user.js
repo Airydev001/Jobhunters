@@ -4,11 +4,11 @@ const { verifyAndAuthorization,verifyToken, verifyAndAdmin } = require("../middl
 const router = require("express").Router();
 
 
-router.put("/:id",verifyAndAuthorization, userController.updateUser);
+router.put("/",verifyAndAuthorization, userController.updateUser);
 
-router.delete("/:id",verifyAndAuthorization, userController.deleteUser);
+router.delete("/",verifyAndAuthorization, userController.deleteUser);
 
-router.get("/:id",verifyAndAuthorization, userController.getUser);
+router.get("/",verifyAndAuthorization, userController.getUser);
 
 
 router.get("/",verifyAndAdmin, userController.getAllUsers);
