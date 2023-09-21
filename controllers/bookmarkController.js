@@ -25,7 +25,12 @@ const {__v,updatedAt, ...newBookmarkInfo} = savedBookmark._doc;
  deleteBookmark: async (req, res)=> {
   // const newBook = new Bookmark(req.body);
   try {
-    await findByIdAndDelete(req.params.id);
+    const userId = req.user.id;
+    const jobId = req.params.id;
+    await Bookmark.findOneAndDelete({
+      userId,
+      jobId,
+    });
 
     res.status(200).json("Bookmark sucessfully deleted");
   } catch (error) {
@@ -36,8 +41,8 @@ getBookmarks: async (req, res) =>{
 
 
   try {
-    const bookmark = await find({
-      userId: req.params.userId
+    const bookmark = await Bookmark.find({
+      userId: req.user.id,
     });
 
     res.status(200).json(bookmark);
