@@ -11,17 +11,20 @@ const messageSchema = new mongoose.Schema({
         trim:true,
     },
     receiver: {
-        typw: String, trim: true
+        type: String, trim: true
     },
     chat: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Chat"
     },
-    readBy: {
-        types: mongoose.Schema.Types.ObjectId,
+    readBy: [ 
+        {
+        type: mongoose.Schema.Types.ObjectId,
         ref: "User"
     }
+]
 });
+
 
 
 module.exports = mongoose.model(
