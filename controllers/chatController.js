@@ -21,7 +21,7 @@ var isChat = await Chat.find({
 .populate("users", "-password")
 .populate("latestMessage");
 
-isChat = await User.poplate(
+isChat = await User.populate(
     isChat, {
         path: "latestMessage.sender",
         select: "username profile email"
