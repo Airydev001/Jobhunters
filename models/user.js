@@ -8,7 +8,7 @@ const UserSchema = new mongoose.Schema(
         location: {type: String , required: false,},
         isAdmin: {
             type: Boolean,
-            default: true,
+            default: false,
         },
         isAgent: {
             type:Boolean,
